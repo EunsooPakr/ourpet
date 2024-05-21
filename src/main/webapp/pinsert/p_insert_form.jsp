@@ -26,12 +26,15 @@
     <td><input type="text" name="p_name" size="20"></td> 
 <tr>
 <tr>
-    <td>성별</td> 
-    <td><input type="text" name="p_gender" size="20"></tr>
+	<td>성별</td>
+	<td><label for="gender"> <!-- 성별 -->
+	</label> <label for="male">남자 <input type="radio" id="male" name="p_gender" value="male" />
+	 		<label for="female">여자 <input type="radio"id="female" name="p_gender" value="female" /></td>
 <tr>
 <tr>
-    <td>생년월일</td>
-    <td><input type="text" name="p_birth" size="20"></tr>
+	<td>생년월일</td>
+	<td><input type="date" name="p_birth" size="20"
+	required value="2024-02-23"/>></td>
 <tr>
 <tr>
     <td>종</td>
@@ -43,7 +46,7 @@
 <tr>
 <tr>
     <td>무게</td>
-    <td><input type="text" name="p_weight" size="20"></tr>
+    <td><input type="number" name="p_weight" size="20"></tr>
 <tr>
 <tr>
     <td colspan="4"><input type="submit" value="반려동물 등록 버튼"></tr>

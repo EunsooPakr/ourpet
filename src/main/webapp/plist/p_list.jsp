@@ -37,15 +37,15 @@ try{
 	String dbUser = "dev51id";
 	String dbPass = "dev51pw";
 	conn = DriverManager.getConnection(jdbcDriver, dbUser, dbPass);
-	System.out.println(conn + "<-- conn m_search_list.jsp");
+	System.out.println(conn + "<-- conn p_search_list.jsp");
 	pstmt = conn.prepareStatement(selectQuery);
 	pstmt.setString(1,S_ID);
-	//System.out.println(pstmt + "<-- pstmt m_search_list.jsp");
-	out.println(pstmt + "<-- pstmt m_search_list.jsp");
+
+	out.println(pstmt + "<-- pstmt p_search_list.jsp");
 	
 	rs = pstmt.executeQuery();
-	System.out.println(rs + "<-- rs m_list.jsp");
-//com.mysql.cj.jdbc.result.ResultSetImpl@5043c656<-- rs m_list.jsp
+	System.out.println(rs + "<-- rs p_list.jsp");
+
 	while(rs.next())
 	{
 %>
@@ -56,8 +56,8 @@ try{
 			<td><%= rs.getString("p_species")%></td>
 			<td><%= rs.getString("p_breed")%></td>
 			<td><%= rs.getString("p_weight")%></td>
-			<td><a href="<%= request.getContextPath() %>/mupdate/m_update_form.jsp?send_id=<%= m.getM_id()%>">수정버튼</a></td>		
-			<td><a href="<%= request.getContextPath() %>/mdelete/m_delete_action.jsp?send_id=<%= m.getM_id()%>">삭제버튼</a></td>	
+			<td><a href="<%= request.getContextPath() %>/pupdate/p_update_form.jsp?send_id=<%= rs.getString("p_code")%>">수정버튼</a></td>		
+			<td><a href="<%= request.getContextPath() %>/pdelete/p_delete_action.jsp?send_id=<%=rs.getString("p_code")%>">삭제버튼</a></td>	
 		</tr>	
 <%	
 	}
