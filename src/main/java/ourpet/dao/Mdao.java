@@ -4,15 +4,16 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
 
 import ourpet.driverdb.DriverDB;
+import ourpet.member.Member;
 
 
 public class Mdao {
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
+	Member m = new Member();
 	
 	public void pDelete(String mid) throws ClassNotFoundException, SQLException
 	{
@@ -26,4 +27,5 @@ public class Mdao {
 		pstmt.close();
 		conn.close();
 	}
+	
 }
