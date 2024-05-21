@@ -46,10 +46,9 @@ try{
 	rs = pstmt.executeQuery();
 	System.out.println(rs + "<-- rs m_list.jsp");
 //com.mysql.cj.jdbc.result.ResultSetImpl@5043c656<-- rs m_list.jsp
-	while(rs.next()){
-		//System.out.println("select 쿼리 실행 결과 몇 줄 나올까?");
+	while(rs.next())
+	{
 %>
-<!-- 화면 위치 시작 -->
 		<tr>
 			<td><%= rs.getString("p_name")%></td>
 			<td><%= rs.getString("p_gender")%></td>
@@ -57,9 +56,9 @@ try{
 			<td><%= rs.getString("p_species")%></td>
 			<td><%= rs.getString("p_breed")%></td>
 			<td><%= rs.getString("p_weight")%></td>
-
-		</tr>
-<!-- 화면 위치 끝 -->		
+			<td><a href="<%= request.getContextPath() %>/mupdate/m_update_form.jsp?send_id=<%= m.getM_id()%>">수정버튼</a></td>		
+			<td><a href="<%= request.getContextPath() %>/mdelete/m_delete_action.jsp?send_id=<%= m.getM_id()%>">삭제버튼</a></td>	
+		</tr>	
 <%	
 	}
 } catch(SQLException ex) {
