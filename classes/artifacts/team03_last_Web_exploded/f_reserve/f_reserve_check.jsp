@@ -41,28 +41,19 @@ tr:nth-child(even) {
 <div style="width:100%; height:300px; overflow:auto">
 <table width="100%" border="1">
 <tr>
-	<td>신청 코드</td><td>업체 코드</td><td>주문자 아이디</td><td>주문자 연락처</td><td>예약 일시</td><td>예약 승인</td><td>예약 취소</td>
+	<td>업체 코드</td><td>주문자 아이디</td><td>주문자 연락처</td><td>예약 일시</td><td>예약 승인</td><td>예약 취소</td>
 </tr>
 <%
 request.setCharacterEncoding("euc-kr");	//post한글처리
-String fc_code = request.getParameter("fc_code");
-String frc_code = request.getParameter("frc_code");
-String fr_id = request.getParameter("fr_id");
-String fr_phone = request.getParameter("fc_phone");
-String fr_sDate = request.getParameter("fr_sDate");
-String fr_check = request.getParameter("fr_check");
 
-System.out.println(frc_code + "<- frc_code ");
+String fr_id = (String)session.getAttribute("S_ID");
+
 System.out.println(fr_id + "<- fr_id ");
-System.out.println(fr_phone + "<- fr_phone ");
-System.out.println(fr_sDate + "<- fr_sDate ");
-System.out.println(fr_check + "<- fr_check ");
+
 Connection conn = null;
 PreparedStatement pstmt = null;
 ResultSet rs = null;
 Class.forName("com.mysql.jdbc.Driver");
-
-
 
 try{
 	String jdbcDriver = "jdbc:mysql://192.168.10.6:3306/dev51db?" +
@@ -71,7 +62,7 @@ try{
 	String dbPass = "dev51pw";
 	conn = DriverManager.getConnection(jdbcDriver, dbUser, dbPass);
 //02단계 :DB연결(Connection)끝
-	System.out.println(frc_code + "<-- frc_code ");
+
 //쿼리실행 준비 단계 : 다양한 조건문을 작성 하면 끝!~~~~~~~~~~~	
 
 	
