@@ -75,5 +75,5 @@ System.out.println(result + "<-- result");
 pstmt.close();
 conn.close();
 
-response.sendRedirect(request.getContextPath()+"/pet/pet_reg_list.jsp");
+response.sendRedirect(request.getContextPath()+"/plist/p_list.jsp");
 %>

@@ -32,8 +32,8 @@ if(S_LEVEL == null){
 	if(S_LEVEL.equals("일반회원")){
 %>
 <a href="<%= request.getContextPath() %>/mupdate/m_update_form.jsp?send_id=<%=S_ID%>">01개인정보수정</a>
-<a href="<%= request.getContextPath() %>/pet/pet_reg_form.jsp">02반려동물정보등록</a>
-<a href="<%= request.getContextPath() %>/pet/pet_reg_list.jsp">03반려동물리스트</a>
+<a href="<%= request.getContextPath() %>/pinsert/p_insert_form.jsp">02반려동물정보등록</a>
+<a href="<%= request.getContextPath() %>/plist/p_list.jsp">03반려동물리스트</a>
 <a href="<%= request.getContextPath() %>/f_reserve/f_reserve.jsp">04장례예약</a>
 <a href="<%= request.getContextPath() %>/f_reserve/f_reserve_check.jsp">05예약확인(수정중)</a>
 

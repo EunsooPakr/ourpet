@@ -15,7 +15,7 @@
 
 반려동물 정보 등록 화면 <br><br>
 
-<form action="<%= request.getContextPath() %>/pet/pet_reg_action.jsp" method="post">
+<form action="<%= request.getContextPath() %>/pinsert/p_insert_action.jsp" method="post">
 <!--     <input type="hidden" name="g_code"> -->
 <table border="1">
 <tr>
