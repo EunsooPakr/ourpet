@@ -7,9 +7,6 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/main.css" />
 </head>
-<h2>sourceTree Test</h2>
-<h1>콩국수</h1>
-<h2>zzzzzzzzzzzzzzz</h2>
 
 <body>
 <%@ include file="/module/top.jsp" %>
