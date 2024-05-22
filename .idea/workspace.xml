@@ -10,10 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3db81be-d97f-4873-ae1f-ab971454dd30" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/f_reserve/f_reserve_cancle.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ourpet/funeral_com/Funeral_com.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ourpet/funeral_reserve/Funeral_reserve.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/f_r/f_r_cancle_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/f_r/f_r_cancle_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/f_reserve/f_reserve_check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/f_reserve/f_reserve_check.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ourpet/dao/Mdao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ourpet/dao/Mdao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
