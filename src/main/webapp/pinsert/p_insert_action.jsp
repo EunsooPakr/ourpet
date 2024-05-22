@@ -6,10 +6,12 @@
 <%@ page import = "java.sql.PreparedStatement" %>
 <%@ page import = "java.sql.ResultSet" %>
 <%@ page import = "java.sql.SQLException" %>>
-
 <%
 //post방식 한글 처리 방법
-request.setCharacterEncoding("euc-kr");
+request.setCharacterEncoding("euc-kr");%>
+<jsp:useBean id="p" class="ourpet.pet.Pet"/>
+<jsp:setProperty name="p" property="*"/>
+<%
 Connection conn = null;
 PreparedStatement pstmt = null;
 ResultSet rs = null;
@@ -23,12 +25,14 @@ String p_species = request.getParameter("p_species");
 String p_breed = request.getParameter("p_breed");
 String p_weight = request.getParameter("p_weight");
 
-System.out.println(p_name + "<-- m_level /minsert/m_insert_action.jsp");
-System.out.println(p_gender + "<-- m_id /minsert/m_insert_action.jsp");
-System.out.println(p_birth + "<-- m_pw /minsert/m_insert_action.jsp");
-System.out.println(p_species + "<-- m_name /minsert/m_insert_action.jsp");
-System.out.println(p_breed + "<-- m_gender /minsert/m_insert_action.jsp");
-System.out.println(p_weight + "<-- m_birth /minsert/m_insert_action.jsp");
+
+System.out.println(p_id + "<-- p_id/pinsert/p_insert_action.jsp");
+System.out.println(p_name + "<-- p_name/pinsert/p_insert_action.jsp");
+System.out.println(p_gender + "<-- p_gender/pinsert/p_insert_action.jsp");
+System.out.println(p_birth + "<-- p_birth/pinsert/p_insert_action.jsp");
+System.out.println(p_species + "<-- p_species/pinsert/p_insert_action.jsp");
+System.out.println(p_breed + "<-- p_breed/pinsert/p_insert_action.jsp");
+System.out.println(p_weight + "<-- p_weight/pinsert/p_insert_action.jsp");
 
 Class.forName("com.mysql.jdbc.Driver");
 String jdbcDriver = "jdbc:mysql://192.168.10.6:3306/dev51db?" +
@@ -50,7 +54,7 @@ if(rs.next()){
 	System.out.println(max + "<-- max 1");
 	max = max + 1;
 	System.out.println(max + "<-- max 2");
-	p_code = tempCode + max;	//예) goods_3
+	p_code = tempCode + max;	
 }
 System.out.println(conn + "<-- conn");
 pstmt = conn.prepareStatement("INSERT INTO tb03_pet VALUES (?, ?, ?, ?, ?, ?, ?, ?)"); 
@@ -67,8 +71,6 @@ pstmt.setString(8, p_weight);
 
 System.out.println(pstmt + "<-- pstmt-2");
 
-//INSERT INTO tb03_member VALUES ('m_id', 'm_pw', 'm_name', 'm_level', 'm_gender', 'm_birth', 'm_phone', 'm_pet', 'm_sms_check')<-- pstmt-2
-//여기까지가 3단계 : 쿼리 실행 준비 완료!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 int result = pstmt.executeUpdate(); //4단계 : 쿼리 실행
 System.out.println(result + "<-- result");
 //1<-- result
