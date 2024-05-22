@@ -65,7 +65,7 @@ try{
 <a href="<%= request.getContextPath() %>/f_r/f_r_accep_action.jsp?send_id=<%= rs.getString("m_id")%>">½Â³«</a>			
 			</td>
 			<td>
-<a href="<%= request.getContextPath() %>/f_r/f_r_cancle_action.jsp?send_id=<%= rs.getString("m_id")%>">Ãë¼Ò</a>			
+<a href="<%= request.getContextPath() %>/f_r/f_r_cancle_action.jsp?send_id=<%= rs.getString("m_id")%>">Ãë¼Ò</a>
 			</td>
 			
 		</tr>
