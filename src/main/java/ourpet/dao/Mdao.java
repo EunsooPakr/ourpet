@@ -1,6 +1,7 @@
 package ourpet.dao;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -77,5 +78,41 @@ public class Mdao {
 		conn.close();
 		
 		return p;
+	}
+	
+	//반려동물 등록 폼 <-- p_insert_action.jsp
+	public void pInsert(Member m) throws ClassNotFoundException, SQLException {
+		System.out.println("1-2 mInsert Mdao.java");
+		DriverDB db = new DriverDB();
+		conn = db.driverDbcon();
+		pstmt = conn.prepareStatement("select max(CAST(substring(p_code,5) AS DECIMAL)) as maxcol from tb03_pet");
+		rs = pstmt.executeQuery();
+		String p_code = "";
+		Pet p=null;
+
+		int max = 0;
+		String tempCode = "pet0";
+		if(rs.next()){
+			max = rs.getInt(1);
+			//max = rs.getInt("maxcol");
+			System.out.println(max + "<-- max 1");
+			max = max + 1;
+			System.out.println(max + "<-- max 2");
+			p_code = tempCode + max;	//예) goods_3
+		}
+		pstmt = conn.prepareStatement("INSERT INTO tb03_pet VALUES (?, ?, ?, ?, ?, ?, ?, ?)"); 
+		pstmt.setString(1, p.getP_code());
+		pstmt.setString(2, p.getP_id());
+		pstmt.setString(3, p.getP_name());
+		pstmt.setString(4, p.getP_gender());
+		pstmt.setString(5, p.getP_birth());
+		pstmt.setString(6, p.getP_species());
+		pstmt.setString(7, p.getP_breed());
+		pstmt.setString(8, p.getP_weight());
+		int result = pstmt.executeUpdate(); //4단계 : 쿼리 실행
+		System.out.println(result + "<-- result");
+		pstmt.close();
+		conn.close();
+		
 	}
 }
