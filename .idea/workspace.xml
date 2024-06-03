@@ -10,10 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3db81be-d97f-4873-ae1f-ab971454dd30" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ourpet/funeral_com/Funeral_com.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ourpet/funeral_reserve/Funeral_reserve.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ourpet/dao/Mdao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ourpet/dao/Mdao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v21_ksmart51_3rd_chapter5.xlsm" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +52,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Tomcat 서버.Tomcat 9.0.80.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;PES&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;TEST&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/parkeunsoo/apache-tomcat-9.0.80/lib/tomcat-api.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -174,6 +173,8 @@
       <updated>1716273954202</updated>
       <workItem from="1716273955406" duration="4487000" />
       <workItem from="1716336809944" duration="314000" />
+      <workItem from="1716770304719" duration="3009000" />
+      <workItem from="1717401238500" duration="367000" />
     </task>
     <servers />
   </component>

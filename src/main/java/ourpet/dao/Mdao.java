@@ -82,6 +82,6 @@ public class Mdao {
 		
 		return p;
 	}
-	public Funeral_reserve
+
 
 }
