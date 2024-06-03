@@ -85,7 +85,7 @@ try{
 		<td><%= rs.getString("fr_sDate")%></td>
 		<td><%= rs.getString("fr_check")%></td>
 		<td>
-<a href="<%= request.getContextPath() %>/f_reserve/f_reserve_catego.jsp?frc_code=<%= rs.getString("frc_code")%>">예약 취소 버튼</a>			
+<a href="<%= request.getContextPath() %>/f_reserve/f_reserve_cancle.jsp?frc_code=<%= rs.getString("frc_code")%>">예약 취소 버튼</a>
 		</td>
 		
 	</tr>			

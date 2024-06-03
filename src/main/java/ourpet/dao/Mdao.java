@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import ourpet.funeral_com.Funeral_com;
+import ourpet.funeral_reserve.Funeral_reserve;
 import ourpet.member.Member;
 import ourpet.pet.Pet;
 import ourpet.driverdb.DriverDB;
@@ -124,6 +126,11 @@ public class Mdao {
 		conn.close(); 
 	}
 	
+
+	Funeral_reserve fr = null;
+	Funeral_com fc = null;
+
+
 	public void pDelete(String pcode) throws ClassNotFoundException, SQLException
 	{
 		DriverDB db=new DriverDB();
@@ -184,4 +191,6 @@ public class Mdao {
 		
 		return p;
 	}
+
+
 }
